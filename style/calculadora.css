@@ -1,0 +1,151 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+:root{
+    --fundos:rgba(48, 48, 48, 0.993);
+}
+body{
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    padding: 0 10px;
+    height: 100vh;
+}
+main{
+    max-width: 300px;
+    height: 450px;
+    padding: 6px;
+    background-color: var(--fundos);
+    top: 50%;
+    transform: translatey(-50%);
+    margin: auto;
+    border-radius: 6px;
+    padding: 19px 14px;
+    position: relative;
+}
+.container{
+    background-color: var(--fundos);
+    display: grid;
+    grid-template-rows:35% 63%;
+    grid-template-areas:
+    "res""gridbtn";
+    grid-gap: 6px;
+    height: 100%;
+}
+.resultado{
+    background-color: var(--fundos);
+    font-size: 33px;
+    grid-area: res;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    padding: 10px;
+    color: aliceblue;
+}
+.digitos{
+    font-size: 50px;
+}
+.resultado_digitos{
+    color: rgb(199, 199, 199);
+}
+.btn_grid{
+    grid-area: gridbtn;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "apagar apagar  c divisao"
+    "b7 b8 b9 x"
+    "b4 b5 b6 menos"
+    "b1 b2 b3 mais"
+    "ponto b0 res mais";
+    grid-gap: 6px;
+}
+p{
+    pointer-events: none;
+    font-size: 22px;
+    color: rgb(247, 247, 247);
+}
+.btn, .btnoperador, .btnres, .btnapagar, .btnponto, .btnlimpar{
+    background-color: rgb(87, 87, 87);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    user-select: none;
+}
+.btn{
+    background-color: rgb(65, 65, 65);
+}
+.btn:active, .btnoperador:active, .btnapagar:active, .btnres:active, .btnlimpar:active{
+    background-color: rgb(192, 192, 192);
+}
+.btnmais{
+    grid-area: mais;
+}
+.btnraiz{
+    grid-area: raiz;
+}
+.btnx{
+    grid-area: x;
+}
+.btndivisao{
+    grid-area: divisao;
+}
+.btn7{
+    grid-area: b7;
+}
+.btn8{
+    grid-area: b8;
+}
+.btn9{
+    grid-area: b9;
+}
+.btnapagar{
+    grid-area: apagar;
+}
+.btn4{
+    grid-area: b4;
+}
+.btn5{
+    grid-area: b5;
+}
+.btn6{
+    grid-area: b6;
+}
+.btnc{
+    grid-area: c;
+}
+.btn1{
+    grid-area: b1;
+}
+.btn2{
+    grid-area: b2;
+}
+.btn3{
+    grid-area: b3;
+}
+.btnmenos{
+    grid-area:  menos;
+}
+
+.btnponto{
+    grid-area: ponto;
+}
+.btn0{
+    grid-area: b0;
+}
+.btnres{
+    grid-area: res;
+    background-color: rgb(124, 203, 255);
+}
+.btnres p {
+    font-size: 35px;
+    color: black;
+}
